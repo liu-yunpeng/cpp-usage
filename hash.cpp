@@ -21,7 +21,7 @@ typedef long long ll;
 
 int main(int argc, char const *argv[])
 {
-	unordered_map<std::string, std::string> a_map;
+	unordered_map<string, string> a_map;
 
 	a_map["h"] = "e";
 	a_map["l"] = "l";
@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
 
 	if (a_map.find("h") != a_map.end())
 	{
-		cout << "found h in map! " << endl;
+		cout << "found h in the map! " << endl;
 	}
 
 	return 0;
