@@ -1,21 +1,6 @@
-#include <algorithm>
-#include <array>
-#include <bitset>
-#include <cassert>
-#include <chrono>
-#include <cmath>
-#include <cstring>
-#include <functional>
-#include <iomanip>
 #include <iostream>
-#include <map>
-#include <numeric>
-#include <queue>
-#include <random>
-#include <set>
 #include <vector>
-#include <unordered_map>
-#include <sstream>
+#include <algorithm>
 using namespace std;
 
 typedef long long ll;
