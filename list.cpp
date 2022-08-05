@@ -1,60 +1,39 @@
+#include <algorithm>
+#include <array>
+#include <bitset>
+#include <cassert>
+#include <chrono>
+#include <cmath>
+#include <cstring>
+#include <functional>
+#include <iomanip>
 #include <iostream>
-#include <cstdlib>
-
-// single LinkedList, always add node at head
-class Node
-{
-public:
-    Node* next;
-    int data;
-};
-
+#include <map>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <set>
+#include <vector>
+#include <unordered_map>
+#include <sstream>
 using namespace std;
 
-class LinkedList
+typedef long long ll;
+
+#define vi vector<int>
+#define vvi vector<vector<int>>
+
+
+int main(int argc, char const *argv[])
 {
-public:
-    Node* head;
-    int length;
+    list<int> lst;
+    lst.push_back(1);
+    lst.push_back(2);
+    lst.push_back(3);
+    lst.push_back(4);
 
-    LinkedList() {
-        this->length = 0;
-        this->head = NULL;
-    }
-    ~LinkedList() {
-        std::cout << "list is deleted";
-    }
+    lst.splice(lst.begin(), lst, prev(lst.end()));
 
-    void add(int data) {
-        Node* node = new Node();
-        node->data = data;
-        node->next = this->head;
-        this->head = node;
-        this->length++;
-    }
-
-    void print() {
-        Node* current_node = this->head;
-        int i = 1;
-        while (current_node) {
-            std::cout << current_node->data << "->";
-            current_node = current_node->next;
-            i++;
-        }
-        std::cout << "NULL" << std::endl;
-    }
-};
-
-
-int main()
-{
-    LinkedList* list = new LinkedList();
-    for (int i = 0; i < 8; ++i)
-    {
-        list->add(i + 1); // notice the reverse order
-    }
-    list->print();
-    std::cout << "List Length: " << list->length << std::endl;
-    delete list;
+    for (auto i : lst) cout << i << endl;
     return 0;
 }
