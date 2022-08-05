@@ -16,12 +16,14 @@
 #include <vector>
 #include <unordered_map>
 #include <sstream>
+#include <list>
 using namespace std;
 
 typedef long long ll;
 
 #define vi vector<int>
 #define vvi vector<vector<int>>
+
 
 
 int main(int argc, char const *argv[])
@@ -32,7 +34,7 @@ int main(int argc, char const *argv[])
     lst.push_back(3);
     lst.push_back(4);
 
-    lst.splice(lst.begin(), lst, prev(lst.end()));
+    lst.splice(lst.begin(), lst, prev(prev(lst.end())), prev(lst.end()));
 
     for (auto i : lst) cout << i << endl;
     return 0;
